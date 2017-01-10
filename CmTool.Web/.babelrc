@@ -2,5 +2,6 @@
   "presets": [ "es2015-loose", "stage-0", "react" ],
    "ignore": [
     "./public/favicon.ico"    
-  ]
+  ],
+  "plugins": [ "react-hot-loader/babel" ] 
 }

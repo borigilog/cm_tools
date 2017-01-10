@@ -17,7 +17,7 @@ export default class JenkinsBuild extends Component {
       super(props);
   }
   
-
+ 
   render() {
       return (      
       <div className='Well' style={wellStyles}>
@@ -34,7 +34,7 @@ export default class JenkinsBuild extends Component {
   }
   
 
-  componentDidMount() {
+  componentDidMount() {    
   }  
   componentWillUnmount() {
   }
