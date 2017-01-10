@@ -1,13 +1,12 @@
 import React, { Component, PropTypes } from 'react';
 import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
-import { Navbar, NavItem, Nav } from 'react-bootstrap';
 //import logo from '../public/favicon.ico';
 import '../assets/stylesheets/App.css';
 import fetchCustomer from '../actions/customer';
 import {selectedKey} from '../actions/app'; 
 import JenkinsBuildApp from './JenkinsBuildApp';
-import Header from '../components/Header'
+import HeaderApp from './HeaderApp'
 /*
 import {ModuleAdministration, ModuleAdminVm} from '../components/ModuleAdministration'
 import {PacketAdministration} from '../components/PacketAdministration';
@@ -26,7 +25,7 @@ class CmApp extends Component {
     render() {
         return (
           <div> 
-           <Header/>
+           <HeaderApp/>
            <JenkinsBuildApp/>              
            </div> 
       );
