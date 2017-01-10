@@ -11,6 +11,18 @@ export default class Header extends Component {
     constructor(props) {         
         super(props);                       
     }
+
+
+   static propTypes = {
+    onSelect: PropTypes.func.isRequired
+   };
+
+
+   handleSelect(selectedId)
+   {
+     this.props.onSelect(selectedId);
+   }
+
     render()
     {
        return(

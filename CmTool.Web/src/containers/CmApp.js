@@ -1,10 +1,11 @@
 import React, { Component, PropTypes } from 'react';
 import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 //import logo from '../public/favicon.ico';
 import '../assets/stylesheets/App.css';
 import fetchCustomer from '../actions/customer';
-import {selectedKey} from '../actions/app'; 
+import {pageChange} from '../actions/app'; 
 import JenkinsBuildApp from './JenkinsBuildApp';
 import HeaderApp from './HeaderApp'
 /*
@@ -18,14 +19,19 @@ import {CustomerAdministration} from '../components/CustomerAdministration';
 class CmApp extends Component {
     constructor(props) {         
         super(props);
-                       
+                          
     }
-
+ 
+ static PropTypes = {
+     pageChange :  PropTypes.func.isRequired
+ }
 
     render() {
+        const { actions } = this.props;
         return (
+            
           <div> 
-           <HeaderApp/>
+           <HeaderApp onPageChange = {this.pageChange}/>
            <JenkinsBuildApp/>              
            </div> 
       );
@@ -67,5 +73,17 @@ class CmApp extends Component {
   }
 }
 
-let  key = 1;
-export default  connect(null, {selectedKey})(CmApp)
+function mapState(state) {
+  return {
+    selectedPage : state.app.selectedPage
+  };
+}
+
+function mapDispatch(dispatch) {
+  return {
+    actions: bindActionCreators(pageChange, dispatch)
+  };
+}
+
+
+export default  connect(mapState,mapDispatch)(CmApp)

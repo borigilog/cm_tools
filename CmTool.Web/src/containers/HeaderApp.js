@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import Header from '../components/Header'
 
 class HeaderApp extends Component
@@ -10,11 +11,15 @@ class HeaderApp extends Component
         super(props)
     }
 
+    static propTypes = {
+       onPageChange :PropTypes.func.isRequired
+    }
+
     render()
     {
-        resturn(
+        return(
             <div>
-             <HeaderApp/>
+             <Header onPageChange = {this.props.onPageChange}/>
             </div>
         );
     }

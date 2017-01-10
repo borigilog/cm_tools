@@ -1,7 +1,7 @@
 
 import * as actionTypeConst from '../constants/actionTypeConst';
 
-export const selectedKey = (selectedKey) => ({
+export const pageChange = (selectedPage) => ({
   type: actionTypeConst.INC_PAGE_ID,
-  selectedKey
+  selectedPage
 })

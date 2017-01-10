@@ -3,7 +3,7 @@ import { Provider } from 'react-redux';
 import CmApp from './CmApp';
 import { ControlLabel, FormControl, Button, ButtonGroup, MenuItem, DropdownButton, Form, FormGroup } from 'react-bootstrap';
 
-export default class Root extends Component {
+export default class App extends Component {
   render() {      
     const { store } = this.props;
     return (
