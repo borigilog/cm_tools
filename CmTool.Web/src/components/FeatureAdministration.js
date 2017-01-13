@@ -4,11 +4,10 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
 import '../assets/stylesheets/App.css';
 
-export class FeatureAdministration extends Component {
+export default class FeatureAdministration extends Component {
 
     constructor(props) {
-        super(props);
-        this.state = props.vm;
+        super(props);        
     }
     render() { return(
         <div>

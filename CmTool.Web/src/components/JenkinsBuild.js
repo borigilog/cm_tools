@@ -23,10 +23,8 @@ export default class JenkinsBuild extends Component {
       <div className='Well' style={wellStyles}>
         <fieldset>
           <legend>Jenkins-Build</legend>
-          <div className='JenkinsBuild'>
-            <table>              
-              <Button type='submit'>Jekins Revisions-File erzeugen</Button>
-            </table>
+          <div className='JenkinsBuild'>       
+              <Button type='submit'>Jekins Revisions-File erzeugen</Button>       
           </div>
         </fieldset>
       </div>

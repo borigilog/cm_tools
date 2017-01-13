@@ -6,7 +6,6 @@ const initialState = {
 };
 
 
-
 const app = (state = initialState , action) => {
     switch (action.type) {
         case  actionTypeConst.INC_PAGE_ID:

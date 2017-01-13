@@ -5,16 +5,14 @@ import { bindActionCreators } from 'redux';
 //import logo from '../public/favicon.ico';
 import '../assets/stylesheets/App.css';
 import fetchCustomer from '../actions/customer';
-import {pageChange} from '../actions/app'; 
-import JenkinsBuildApp from './JenkinsBuildApp';
-import HeaderApp from './HeaderApp'
-/*
-import {ModuleAdministration, ModuleAdminVm} from '../components/ModuleAdministration'
-import {PacketAdministration} from '../components/PacketAdministration';
-import {FeatureAdministration} from '../components/FeatureAdministration';
-import {CustomerAdministration} from '../components/CustomerAdministration';
-*/
+import {onPageChange} from '../actions/app'; 
 
+import HeaderApp from './HeaderApp'
+import CustomerAdministrationApp from './CustomerAdministrationApp';
+import JenkinsBuildApp from './JenkinsBuildApp';
+import FeatureAdministrationApp from './FeatureAdministrationApp';
+import ModuleAdministrationApp from './ModuleAdministrationApp';
+import PacketAdministrationApp from './PacketAdministrationApp';
 
 class CmApp extends Component {
     constructor(props) {         
@@ -23,67 +21,62 @@ class CmApp extends Component {
     }
  
  static PropTypes = {
-     pageChange :  PropTypes.func.isRequired
+     onPageChange :  PropTypes.func.isRequired,     
  }
 
-    render() {
-        const { actions } = this.props;
-        return (
-            
+ render() {     
+        return (            
           <div> 
-           <HeaderApp onPageChange = {this.pageChange}/>
-           <JenkinsBuildApp/>              
+           <HeaderApp/>
+           {this.getPageById()}
            </div> 
       );
     }
-     
+
     getPageById()
-    {
-    /*    let id = key;
-        switch(id)
+    {   
+        switch(currentPageIdx)
         {
             case 1:                
-                return <JenkinsBuild/>;
+                return <JenkinsBuildApp/>;
                 break;
             case 2: 
-                return <FeatureAdministration/>;
+                return <FeatureAdministrationApp/>;
                 break;
             case 3:
-                ReactDOM.render(<CustomerAdministration/>,document.getElementById('rootPages'));
+                <CustomerAdministrationApp/>;
                 break;
             case 4:
-                ReactDOM.render(<ModuleAdministration vm={new ModuleAdminVm()} />, document.getElementById('rootPages'));
-        break;
+                <ModuleAdministrationApp/>;
+                break;
             case  5:              
-              ReactDOM.render(<PacketAdministration/>,document.getElementById('rootPages'));
+              <PacketAdministrationApp/>;
               break;
           default:
-         }
-         */
+         }         
       }
+}
 
 
-  handleSelect(id)
+let currentPageIdx = 1;
+
+function mapStateToProps(state) {
+    if ( currentPageIdx  !== state.app.selectedPage)
+    {
+       currentPageIdx = state.app.selectedPage;
+    }
+  
+  return 
   {
-      /*
-   key = id;
-   ReactDOM.unmountComponentAtNode(React.findDOMNode('curPage').parentNode);
-   ReactDOM.render();   
-   */
-  }
-}
-
-function mapState(state) {
-  return {
-    selectedPage : state.app.selectedPage
+    selectedPageIdx : state.app.selectedPage
   };
 }
 
-function mapDispatch(dispatch) {
+function mapDispatchToProps(dispatch) {
   return {
-    actions: bindActionCreators(pageChange, dispatch)
+    actions: bindActionCreators(onPageChange, dispatch)
   };
 }
 
 
-export default  connect(mapState,mapDispatch)(CmApp)
+export default  connect(mapStateToProps ,mapDispatchToProps)(CmApp)

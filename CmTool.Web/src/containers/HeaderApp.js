@@ -2,7 +2,11 @@ import React, { Component, PropTypes } from 'react';
 import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import {onPageChange} from '../actions/app'; 
 import Header from '../components/Header'
+
+
+
 
 class HeaderApp extends Component
 {
@@ -11,18 +15,31 @@ class HeaderApp extends Component
         super(props)
     }
 
-    static propTypes = {
-       onPageChange :PropTypes.func.isRequired
-    }
+   // static propTypes = {  
+  //    selectedPage : PropTypes.number
+  //  }
 
     render()
     {
         return(
             <div>
-             <Header onPageChange = {this.props.onPageChange}/>
+             <Header onPageChange = { (e) =>
+                {                   
+                  this.props.onPageChange(e);
+                }
+            }/>
             </div>
         );
     }
 }
 
-export default connect()(HeaderApp)
+
+
+function mapDispatchToProps(dispatch) {
+  return {
+    onPageChange: bindActionCreators(onPageChange, dispatch)
+  };
+}
+
+
+export default  connect(null,mapDispatchToProps)(HeaderApp)

@@ -9,13 +9,13 @@ import JenkinsBuild from '../components/JenkinsBuild';
 class JenkinsBuildApp extends Component {
     componentDidMount() {        
     if (this.props.actions) {        
-      this.props.actions.fetchCustomerFromServer();
+  //    this.props.actions.fetchCustomerFromServer();
     }
   }
     
     render(){
           const { todos, actions } = this.props;
-          //return (<JenkinsBuild> </JenkinsBuild>) ;
+          return (<JenkinsBuild> </JenkinsBuild>) ;
           return (<div> </div>) ;
          }    
 }
@@ -33,4 +33,4 @@ function mapDispatch(dispatch) {
   };
 }
 
-export default connect(mapState, mapDispatch)(JenkinsBuildApp);
+export default connect()(JenkinsBuildApp);
