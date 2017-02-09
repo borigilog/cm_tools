@@ -10,11 +10,14 @@ const wellStyles = { maxWidth: 500, margin: '0 auto 10px' };
 
 class PacketAdministrationApp extends Component {    
     constructor(props) {         
-      super(props);
+      super(props);     
   }
   
  
+
+ 
   render() {
+      
       return (      
       <div>
        <PacketAdministration/>;
@@ -29,4 +32,20 @@ class PacketAdministrationApp extends Component {
   }
 }
 
-export default connect()(PacketAdministrationApp)
+
+
+const mapStateToProps =  (state) => {
+   let res = {
+    currentPageIdx : state.app.selectedPage
+  };
+  return res;
+  
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    actions: bindActionCreators(onPageChange, dispatch)
+  };
+}
+
+export default connect(mapStateToProps ,mapDispatchToProps) (PacketAdministrationApp)

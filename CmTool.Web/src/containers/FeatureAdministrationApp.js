@@ -10,7 +10,7 @@ class FeatureAdministrationApp extends Component {
   }
   
  
-  render() {
+  render() {      
       return (      
       <div>    
         <FeatureAdministration/>

@@ -6,11 +6,11 @@ import CustomerAdministration from '../components/CustomerAdministration';
 
 class CustomerAdministrationApp extends Component {    
     constructor(props) {         
-      super(props);
+      super(props);      
   }
   
  
-  render() {
+  render() {    
       return (      
       <div>        
         <CustomerAdministration/>     
@@ -18,9 +18,9 @@ class CustomerAdministrationApp extends Component {
     );  
   }
   
-
   componentDidMount() {    
   }  
+  
   componentWillUnmount() {
   }
 }

@@ -7,10 +7,12 @@ import '../assets/stylesheets/App.css';
 export default class PacketAdministration extends Component {
 
     constructor(props) {
-        super(props);
-        this.state = props.vm;
+        super(props);                
     }
-    render() { return(
+    
+    
+    render() {
+         return(        
         <div>
          <b>PacketAdministration</b>
         </div>

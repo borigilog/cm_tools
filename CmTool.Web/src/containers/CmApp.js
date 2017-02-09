@@ -21,7 +21,8 @@ class CmApp extends Component {
     }
  
  static PropTypes = {
-     onPageChange :  PropTypes.func.isRequired,     
+     onPageChange :  PropTypes.func.isRequired, 
+     currentPageIdx : PropTypes.number.isRequired    
  }
 
  render() {     
@@ -34,8 +35,8 @@ class CmApp extends Component {
     }
 
     getPageById()
-    {   
-        switch(currentPageIdx)
+    {               
+        switch(this.props.currentPageIdx)
         {
             case 1:                
                 return <JenkinsBuildApp/>;
@@ -44,32 +45,26 @@ class CmApp extends Component {
                 return <FeatureAdministrationApp/>;
                 break;
             case 3:
-                <CustomerAdministrationApp/>;
+                return  <CustomerAdministrationApp/>;
                 break;
             case 4:
-                <ModuleAdministrationApp/>;
+                return <ModuleAdministrationApp/>;
                 break;
-            case  5:              
-              <PacketAdministrationApp/>;
+            case  5:               
+              return <PacketAdministrationApp/>;
               break;
           default:
+          
          }         
       }
 }
 
 
-let currentPageIdx = 1;
-
-function mapStateToProps(state) {
-    if ( currentPageIdx  !== state.app.selectedPage)
-    {
-       currentPageIdx = state.app.selectedPage;
-    }
-  
-  return 
-  {
-    selectedPageIdx : state.app.selectedPage
+const mapStateToProps =  (state) => {
+   let res = {
+    currentPageIdx : state.app.selectedPage
   };
+  return res;  
 }
 
 function mapDispatchToProps(dispatch) {
@@ -79,4 +74,4 @@ function mapDispatchToProps(dispatch) {
 }
 
 
-export default  connect(mapStateToProps ,mapDispatchToProps)(CmApp)
+export default connect(mapStateToProps ,mapDispatchToProps)(CmApp)
