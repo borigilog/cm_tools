@@ -4,7 +4,7 @@ dann npm install
 
 Falls nuget Peckages fehlen, in der Nuget Management Console:
 Install-Package Microsoft.AspNet.WebApi.Cors 
-ausführen
+Visual Studio ausführen
 
 
 

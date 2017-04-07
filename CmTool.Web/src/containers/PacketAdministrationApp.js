@@ -12,15 +12,12 @@ class PacketAdministrationApp extends Component {
     constructor(props) {         
       super(props);     
   }
-  
- 
-
- 
+      
   render() {
       
       return (      
       <div>
-       <PacketAdministration/>;
+       <PacketAdministration/>
       </div>
     );  
   }
@@ -34,18 +31,4 @@ class PacketAdministrationApp extends Component {
 
 
 
-const mapStateToProps =  (state) => {
-   let res = {
-    currentPageIdx : state.app.selectedPage
-  };
-  return res;
-  
-}
-
-function mapDispatchToProps(dispatch) {
-  return {
-    actions: bindActionCreators(onPageChange, dispatch)
-  };
-}
-
-export default connect(mapStateToProps ,mapDispatchToProps) (PacketAdministrationApp)
+export default connect() (PacketAdministrationApp)

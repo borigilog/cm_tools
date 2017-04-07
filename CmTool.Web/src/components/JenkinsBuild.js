@@ -5,6 +5,8 @@ import { ControlLabel, FormControl, Button, ButtonGroup, MenuItem, DropdownButto
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
 import '../assets/stylesheets/App.css';
+//import  '../assets/stylesheets/button.sass';
+
 
 
 
@@ -17,20 +19,21 @@ export default class JenkinsBuild extends Component {
       super(props);
   }
   
- 
+
   render() {
       return (      
       <div className='Well' style={wellStyles}>
         <fieldset>
           <legend>Jenkins-Build</legend>
           <div className='JenkinsBuild'>       
-              <Button type='submit'>Jekins Revisions-File erzeugen</Button>       
+              <Button  type='submit'>Jekins Revisions-File erzeugen </Button>       
           </div>
         </fieldset>
       </div>
     );  
   }
   
+ 
 
   componentDidMount() {    
   }  

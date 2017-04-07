@@ -1,6 +1,15 @@
 import fetch from 'isomorphic-fetch'
 import * as actionTypeConst from '../constants/actionTypeConst';
 
+
+
+
+
+export const Customer_FETCHING = 'CONTINGENT_FETCHING';
+export const Customer_FETCH_SUCCESSFUL = 'CONTINGENT_FETCH_SUCCESSFUL';
+export const Customer_FETCH_ERROR = 'CONTINGENT_FETCH_ERROR';
+
+
 const apiUrl = __API_URL__;
 const jenkinsApiUrl = apiUrl + '/jenkins';
 
