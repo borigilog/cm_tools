@@ -13,7 +13,7 @@ import JenkinsBuild from '../components/JenkinsBuild';
 class JenkinsBuildApp extends Component {
 
     static propTypes = {
-        fetchCustomerFromServer : PropTypes.func.isRequired;
+        fetchCustomerFromServer : PropTypes.func.isRequired
     }
 
     componentDidMount() {        

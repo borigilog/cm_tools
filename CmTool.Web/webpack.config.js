@@ -47,17 +47,18 @@ module.exports = {
 	
   ],
   resolveLoader: {
-    'fallback': path.join(__dirname, 'node_modules')
+     modules: ["node_modules"]
+   // root: path.join(__dirname, 'node_modules')       
   },
   module: {
-    loaders: [{
+    rules: [{
       test: /\.js$/,
-      loaders: ['babel'],
+      use: ['babel-loader'],
       exclude: /node_modules/,
       include: __dirname
     }, {
       test: /\.css?$/,
-      loaders: ['style', 'raw'],
+      use: ['style-loader', 'raw-loader'],
       include: __dirname
     }]
   }
