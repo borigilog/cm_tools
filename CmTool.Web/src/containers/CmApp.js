@@ -39,20 +39,16 @@ class CmApp extends Component {
         switch(this.props.currentPageIdx)
         {
             case 1:                
-                return <JenkinsBuildApp/>;
-                break;
+                return <JenkinsBuildApp/>;                
             case 2: 
-                return <FeatureAdministrationApp/>;
-                break;
+                return <FeatureAdministrationApp/>;                
             case 3:
-                return  <CustomerAdministrationApp/>;
-                break;
+                return  <CustomerAdministrationApp/>;                
             case 4:
-                return <ModuleAdministrationApp/>;
-                break;
+                return <ModuleAdministrationApp/>;                
             case  5:               
               return <PacketAdministrationApp/>;
-              break;
+
           default:
           
          }         

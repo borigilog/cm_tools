@@ -1,0 +1,45 @@
+.button
+  font-weight: bold
+  +button-style($primary-color, darken($primary-color, 10%))
+  outline: none
+  &.without-margin
+    margin-bottom: 0
+  &.as-small
+    height: 2rem
+    padding: 3px 20px
+    font-size: inherit
+  &.as-pill
+    border-radius: 20px
+    border: none
+    padding-left: 30px
+    padding-right: 30px
+  &.as-white
+    background: $white
+    color: $dark-blue-gray
+    &:hover
+      color: $dark-gray
+  &.as-basic
+    border-radius: 20px
+    color: $white
+    text-transform: uppercase
+    span.fa
+      font-size: 16px
+      margin-right: 10px
+    &:hover
+      background: $primary-color
+      color: $white
+      border-color: $primary-color
+    &.with-icon-right
+      span.fa
+        margin-left: 10px
+        margin-right: 0px
+  &.only-icon
+    span.fa
+      margin-right: 0px
+    &.as-hollow
+      background: $white
+      border: 2px solid $primary-color
+      color: $primary-color
+      &:hover
+        background: $primary-color
+        color: $white

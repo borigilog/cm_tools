@@ -71,10 +71,18 @@
     <Content Include="package.json" />
     <Content Include="src\actions\customer.js" />
     <Content Include="src\components\CustomerAdministration.js" />
+    <Content Include="src\components\Header.js" />
     <Content Include="src\config\apiEndpoints.js" />
-    <Content Include="src\constants\actionTypes.js" />
-    <Content Include="src\containers\Header.js" />
+    <Content Include="src\constants\actionTypeConst.js" />
+    <Content Include="src\containers\CmApp.js" />
+    <Content Include="src\containers\CustomerAdministrationApp.js" />
+    <Content Include="src\containers\FeatureAdministrationApp.js" />
+    <Content Include="src\containers\HeaderApp.js" />
+    <Content Include="src\containers\JenkinsBuildApp.js" />
+    <Content Include="src\containers\ModuleAdministrationApp.js" />
+    <Content Include="src\containers\PacketAdministrationApp.js" />
     <Content Include="src\foundation._init.js" />
+    <Content Include="src\reducers\app.js" />
     <Content Include="src\reducers\customer.js" />
     <Content Include="src\reducers\index.js" />
     <Content Include="src\store\configureStore.js" />
@@ -83,7 +91,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="src\assets\images\favicon.ico" />
-    <Content Include="public\index.html" />
+    <Content Include="node_modules\public\index.html" />
     <Content Include="src\components\Account.js" />
     <Content Include="src\assets\stylesheets\App.css" />
     <Content Include="src\containers\App.js" />
@@ -104,6 +112,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="web.config" />
+    <Content Include=".eslintrc" />
+    <Content Include=".babelrc" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>

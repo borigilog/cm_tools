@@ -22,8 +22,7 @@ class JenkinsBuildApp extends Component {
     
     render(){
           const { todos, actions } = this.props;
-          return (<JenkinsBuild> </JenkinsBuild>) ;
-          return (<div> </div>) ;
+          return (<JenkinsBuild> </JenkinsBuild>) ;          
          }    
 }
 

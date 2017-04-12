@@ -188,8 +188,7 @@ namespace TestConfiguration
                     var allMainModules = dirRep.GetModules(selector, platform, SwitchConst._MainModule);
                     if (allMainModules.Count == 0)
                     {
-                        continue;
-                        Debug.WriteLine(string.Format("Keine TEST,PROD Verzeichnisse in  {0}", selector));
+                        continue;                        
                     }
 
                     var allMiniModules = dirRep.GetModules(selector, platform, SwitchConst._MiniModule);
