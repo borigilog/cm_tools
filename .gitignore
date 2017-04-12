@@ -243,3 +243,7 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+/CmTool.Web/stats.json
+/CmTool.Web/dist/vendor-1.0.0.js
+/CmTool.Web/dist/main-1.0.0.js
+/CmTool.Web/webpack.prod.config.js.bak

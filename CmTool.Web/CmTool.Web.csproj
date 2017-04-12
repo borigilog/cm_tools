@@ -69,6 +69,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="package.json" />
+    <Content Include="public\index.html" />
     <Content Include="src\actions\customer.js" />
     <Content Include="src\components\CustomerAdministration.js" />
     <Content Include="src\components\Header.js" />
