@@ -123,6 +123,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\JsonContentNegatiator.cs" />
+    <Compile Include="Controllers\ModuleController.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\JenkinsController.cs" />
     <Compile Include="Global.asax.cs">

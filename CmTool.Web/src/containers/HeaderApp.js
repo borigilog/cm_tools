@@ -12,13 +12,9 @@ class HeaderApp extends Component
 {
     constructor (props)
     {
-        super(props)
+       super(props)
     }
-
-   // static propTypes = {  
-  //    selectedPage : PropTypes.number
-  //  }
-
+   
     render()
     {
         return(

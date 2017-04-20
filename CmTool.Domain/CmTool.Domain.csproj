@@ -60,7 +60,10 @@
     <Compile Include="Domain\Generated\BaseConfig.cs" />
     <Compile Include="Domain\Generated\Module_Server_Access.cs" />
     <Compile Include="Domain\Generated\Module_Settings.cs" />
+    <Compile Include="Domain\Models\Customers.cs" />
+    <Compile Include="Domain\Models\ItemModel.cs" />
     <Compile Include="Domain\Models\JenkinsBuildModel.cs" />
+    <Compile Include="Domain\Models\ModuleModel.cs" />
     <Compile Include="Infrastructure\JenkinsBuildRepository.cs" />
     <Compile Include="Infrastructure\SettingsToolConfiguration.cs" />
     <Compile Include="Infrastructure\DirectoryInfoRepository.cs" />

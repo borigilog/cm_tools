@@ -11,7 +11,7 @@ export const Customer_FETCH_ERROR = 'CONTINGENT_FETCH_ERROR';
 
 
 const apiUrl = __API_URL__;
-const jenkinsApiUrl = apiUrl + '/jenkins';
+const jenkinsApiUrl = apiUrl + '/Module';
 
 
 const getCustomerRequest = ()=> {{actionTypeConst: types.GET_All_REQUEST }};

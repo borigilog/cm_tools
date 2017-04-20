@@ -70,7 +70,9 @@
   <ItemGroup>
     <Content Include="package.json" />
     <Content Include="public\index.html" />
+    <Content Include="src\actions\app.js" />
     <Content Include="src\actions\customer.js" />
+    <Content Include="src\actions\fetchModuleAdministration.js" />
     <Content Include="src\components\CustomerAdministration.js" />
     <Content Include="src\components\Header.js" />
     <Content Include="src\config\apiEndpoints.js" />
@@ -86,6 +88,7 @@
     <Content Include="src\reducers\app.js" />
     <Content Include="src\reducers\customer.js" />
     <Content Include="src\reducers\index.js" />
+    <Content Include="src\reducers\moduleAdmin.js" />
     <Content Include="src\store\configureStore.js" />
     <Content Include="webpack.config.js" />
     <Content Include="webpack.prod.config.js" />

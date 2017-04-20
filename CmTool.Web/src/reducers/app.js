@@ -2,7 +2,7 @@
 import * as actionTypeConst from '../constants/actionTypeConst';
 
 const initialState = {
- selectedPage  : 1
+ selectedPage  : 4
 };
 
 
@@ -18,3 +18,4 @@ const app = (state = initialState , action) => {
 
 
 export default app;
+    
