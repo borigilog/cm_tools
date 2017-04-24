@@ -74,6 +74,7 @@
     <Content Include="src\actions\customer.js" />
     <Content Include="src\actions\fetchModuleAdministration.js" />
     <Content Include="src\components\CustomerAdministration.js" />
+    <Content Include="src\components\Form\Select.js" />
     <Content Include="src\components\Header.js" />
     <Content Include="src\config\apiEndpoints.js" />
     <Content Include="src\constants\actionTypeConst.js" />
@@ -118,6 +119,18 @@
     <Content Include="web.config" />
     <Content Include=".eslintrc" />
     <Content Include=".babelrc" />
+    <Content Include="src\components\Form\Select.sass" />
+    <Content Include="src\assets\stylesheets\box.sass" />
+    <Content Include="src\assets\stylesheets\colors.sass" />
+    <Content Include="src\assets\stylesheets\container.sass" />
+    <Content Include="src\assets\stylesheets\form.sass" />
+    <Content Include="src\assets\stylesheets\foundation_overrides.sass" />
+    <Content Include="src\assets\stylesheets\global.sass" />
+    <Content Include="src\assets\stylesheets\icons.sass" />
+    <Content Include="src\assets\stylesheets\information.sass" />
+    <Content Include="src\assets\stylesheets\section.sass" />
+    <Content Include="src\assets\stylesheets\slide_container.sass" />
+    <Content Include="src\assets\stylesheets\table.sass" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>

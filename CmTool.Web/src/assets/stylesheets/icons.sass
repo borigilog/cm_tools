@@ -1,0 +1,32 @@
+.fa
+  transition: .2s ease-in-out all
+  &.as-circled
+    border: 1px solid $dark-blue-gray
+    border-radius: 100%
+    width: 26px
+    height: 26px
+    line-height: 24px
+    text-align: center
+    color: $dark-blue-gray
+    &:hover
+      background: $dark-blue-gray
+      color: $white
+  &.as-highlighted
+    color: $primary-color
+    border-color: $primary-color
+    &:hover
+      background: $primary-color
+      color: $white
+
+.link-with-icon
+  cursor: pointer
+  .link-with-icon--icon-first
+    margin-right: 10px
+  &:hover
+    .fa
+      &.as-circled
+        background: $dark-blue-gray
+        color: $white
+      &.as-highlighted
+        background: $primary-color
+        color: $white

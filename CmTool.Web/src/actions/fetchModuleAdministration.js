@@ -16,17 +16,24 @@ const checkStatus = (response) => {
 }
 
 
+const apiResponse = (data) => (
+    {
+        type: 'Success',
+        modAdmin: data
+    });
 
 
-export const fetchModuleAdministration = function () {
-         window.fetch(api).then(checkStatus)
-        .then((response) => response.json())
-             .then(function (json) {
-                 let r = json;
-            return r;
-        })
-        .catch(function (err) {
-            console.log(err);
-            return err;
-        });    
+
+export function fetchModuleAdministration() {
+    return (dispatch) => {
+        return fetch(api).then(checkStatus)
+            .then((response) => response.json())
+            .then(function (json) {
+                dispatch(apiResponse(json));
+            });
+            //.catch(function (err) {
+            //    console.log(err);     
+            //    return err;
+            //});        
+    }
 }

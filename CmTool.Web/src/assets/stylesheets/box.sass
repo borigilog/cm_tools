@@ -1,0 +1,52 @@
+.a-box
+  background: $white
+  font-size: $small-font-size
+  margin-bottom: $global-margin * 2
+  position: relative
+  .a-box--header
+    border-left: 5px solid $primary-color
+    padding-left: 10px
+    border-bottom: 1px solid $light-gray
+    line-height: 38px
+    text-transform: uppercase
+    font-weight: bold
+  .a-box--content
+    padding: 0 10px 10px
+    min-height: 80px
+    &.as-flexed
+      display: flex
+      padding: 0
+      flex-wrap: wrap
+  .a-box--row
+    line-height: 38px
+    border-bottom: 1px solid $light-gray
+    &.as-headline
+      text-transform: uppercase
+    &:hover
+      background: $light-gray
+  .a-box--link
+    font-style: italic
+    color: $primary-color
+    border-bottom: 2px solid $primary-color
+    margin-left: 10px
+    cursor: pointer
+  .a-box--preview
+    border: 1px solid $light-gray
+    border-top: none
+    padding: 10px 10px 10px 40px
+    flex: 1 0 50%
+    position: relative
+    font-size: 13px
+    &:hover
+      background: $light-gray
+    .a-box--preview--text
+      margin-top: 10px
+    .a-box--preview--icon
+      position: absolute
+      left: 10px
+      color: $dark-gray
+      font-size: 18px
+  @include breakpoint(small only)
+    .a-box--preview
+      flex: 1 0 100%
+      -webkit-flex: 1 0 100%

@@ -1,0 +1,34 @@
+@import 'settings/_settings'
+@import './foundation_overrides'
+@import 'foundation'
+@include foundation-everything(true);
+
+@import './colors'
+@import './box'
+@import './container'
+@import './icons'
+@import './information'
+@import './button'
+@import './form'
+@import './section'
+@import './slide_container'
+@import './table'
+
+#react-container
+  // display: flex
+  background: $white
+  // flex-direction: column
+  // > div
+  //   display: flex
+  //   flex-direction: column
+
+.menu li:focus
+  outline: none
+
+.content-wrapper
+  min-height: 100vh
+  display: flex
+  flex-direction: column
+  .content-container
+    flex: 1
+    -webkit-flex: 1

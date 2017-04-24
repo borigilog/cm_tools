@@ -1,0 +1,53 @@
+.a-slide-container
+  margin-bottom: 20px
+  position: relative
+  .a-slide-container--left
+    background: $light-gray
+    padding-top: 10px
+    &.as-white
+      background: $white
+      padding: 20px 20px 0
+  .a-slide-container--headline
+    font-size: 14px
+    margin-bottom: 5px
+    font-weight: bold
+  .a-slide-container--right
+    background: $white
+    padding: 20px 20px 20px 0
+  +breakpoint(medium only)
+    .a-slide-container--left
+      padding-left: 10px
+  +breakpoint(small only)
+    width: 100vw
+    overflow-x: hidden
+    margin-bottom: 0
+    .a-slide-container--left
+      position: relative
+      transform: translate3d(0, 0, 0)
+      transition: .3s ease-in-out all
+      &.as-white
+        background: $white
+        padding-right: 10px
+      &:after
+        content: ''
+        position: absolute
+        z-index: 2
+        right: 0
+        top: 0
+        height: 100%
+    .a-slide-container--right
+      position: absolute
+      left: 0
+      width: 100%
+      height: 100%
+      transform: translate3d(100vw, 0, 0)
+      transition: .3s ease-in-out all
+      border-left: 4px solid $primary-color
+      padding-right: 40px
+    &[data-right=true]
+      .a-slide-container--left
+        transform: translate3d(-90vw, 0, 0)
+        &:after
+          width: 10vw
+      .a-slide-container--right
+        transform: translate3d(10vw,0,0)

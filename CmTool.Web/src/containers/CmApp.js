@@ -40,6 +40,7 @@ class CmApp extends Component {
         {
             case 1:                
                 return <JenkinsBuildApp/>;                
+
             case 2: 
                 return <FeatureAdministrationApp/>;                
             case 3:

@@ -1,8 +1,12 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { ControlLabel, FormControl, Button, ButtonGroup, MenuItem, DropdownButton, Form, FormGroup, HelpBlock, Checkbox,FieldGroup } from  'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
 import '../assets/stylesheets/App.css';
+import Select from './Form/Select';
+import _ from 'lodash';
+
+
 
 
 
@@ -60,11 +64,30 @@ export class DropDownVm {
 
 const wellStyles = { maxWidth: 600, margin: '0 auto 10px' };
 
+
 export class ModuleAdministration extends Component {
     constructor(props) {
-        super(props);
-        this.state = props.vm;
+        super(props);        
+        this.state = props.vm;            
     }
+
+    customers = () => {
+        let arr = [];
+        const customers =
+            _.map(this.props.modAdmin.customers.items, (item) => {
+                _.concat(arr, [{ name: item.name, id: item.id }]);
+            }
+            )
+        return arr
+    };
+
+    static propTypes = {
+        modAdmin: PropTypes.object
+    }
+    
+    componentDidMount() {        
+    }
+    
     render() {
         return (
             <div className="Well" style={wellStyles}>
@@ -107,13 +130,23 @@ export class ModuleAdministration extends Component {
                                 </tr>                       
                         </table>
                     </div>
+                    <div className='columns small-12 medium-4 large-4'>
+                        <label>
+                            Test
+                    </label>
+                        <Select                            
+                            name='Kunde'                            
+                            ref='variant'
+                            disabled={false}
+                            showLabel={true}
+                          //  options={[{ id: 1, value: "Bill" }, { id: 2, value: "OAC" }]}
+                            options={this.customers()}
+                        />
+                    </div>
                 </fieldset>
+            
             </div>
         )
     }
+   
 }
-
-/*
-     />
-*/
-

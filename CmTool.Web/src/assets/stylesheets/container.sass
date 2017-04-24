@@ -1,0 +1,28 @@
+.a-container
+  background: $white
+  margin-bottom: 20px
+  &.with-padding-top
+    padding-top: 20px
+  &.as-gray
+    background: $light-gray
+
+    .a-container--header
+      border-color: $white
+
+  .a-container--header
+    text-transform: uppercase
+    color: $dark-gray
+    font-size: 12px
+    line-height: 30px
+    border-bottom: 2px solid $light-gray
+    padding: 0 10px
+    font-weight: 600
+  .a-container--body
+    padding: 10px
+
+    .a-container--body--text
+      font-size: 1rem
+  .a-container--icon
+    color: $alert-color
+    font-size: 16px
+    margin-right: 10px

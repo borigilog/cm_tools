@@ -54,16 +54,18 @@ const customerResponse = (data) => ({
 
 export function fetchCustomerFromServer() {
     return (dispatch) => {               
-        fetch(jenkinsApiUrl, {
+         fetch(jenkinsApiUrl, {
             headers: {
                 'Accept': 'application/json'
             }
         })
-        .then(checkStatus)
-        .then(parseJSON)
-        .then(data => {
-            dispatch( customerResponse(getCustomerSuccess(data)));
-        })
+            .then(checkStatus)
+            .then(parseJSON)
+             .then(data => {                 
+                var x = dispatch(customerResponse(getCustomerSuccess(data)));
+                alert(x);
+                return x;
+            })
         .catch(handleApiError);        
     };
 }
